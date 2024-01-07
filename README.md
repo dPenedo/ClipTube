@@ -16,7 +16,7 @@ download_location = "/home/yourName/Downloads/youtube"
 ```
 
 
-Then, just copy on your clipboard (ctrl + c) a youtube URL, go to the cloned ClipTube directory on your terminal and execute:
+Then, just copy on your clipboard (ctrl + c) a youtube URL, go to the cloned ClipTube directory on your terminal where you cloned this repo and execute:
 ```bash
 $ python main.py
 ```
