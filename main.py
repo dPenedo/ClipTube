@@ -24,6 +24,10 @@ def download_video(url, *formato):
     except subprocess.CalledProcessError as e:
         print(f"X Error downloading the video: {e}")
 
-download_video(url_youtube, *MP3_FORMAT)
+# Video
+download_video(url_youtube, *MP4_FORMAT)
+
+# Audio
+# download_video(url_youtube, *MP3_FORMAT)
 
 
