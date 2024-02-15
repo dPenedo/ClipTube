@@ -25,9 +25,9 @@ def download_video(url, *formato):
         print(f"X Error downloading the video: {e}")
 
 # Video
-download_video(url_youtube, *MP4_FORMAT)
+# download_video(url_youtube, *MP4_FORMAT)
 
 # Audio
-# download_video(url_youtube, *MP3_FORMAT)
+download_video(url_youtube, *MP3_FORMAT)
 
 
