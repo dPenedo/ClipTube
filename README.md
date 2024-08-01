@@ -32,19 +32,13 @@ sudo apt install ffmpeg
 
 ## How to config
 
-Navigate to the `main.py` file and manually update your `download_location`:
+Navigate to the `main.py` file and manually update your `download_location`, `mp3_format`, `mp4_format` or `clipboard_program`:
 
 ```python
-download_location = "/home/yourName/Downloads/youtube"
-```
-Additionally, uncomment/comment the appropriate lines to choose between MP4 and MP3 formats:
-
-``` python
-# Video
-# download_video(url_youtube, *MP4_FORMAT)
-
-# Audio
-download_video(url_youtube, *MP3_FORMAT)
+DOWNLOAD_LOCATION = "/home/daniel/Descargas/youtube/"
+MP3_FORMAT = ["-x", "--audio-format", "mp3"]
+MP4_FORMAT = ["--remux-video", "mp4"]
+CLIPBOARD_PROGRAM = "xclip"
 ```
 
 
@@ -53,5 +47,8 @@ download_video(url_youtube, *MP3_FORMAT)
 2. Navigate to the cloned ClipTube directory in your terminal.
 3. Execute the following command:
 ```bash
-$ python main.py
+# For Video downloading
+$ python main.py -v
+# For Audio downloading
+$ python main.py -a
 ```
