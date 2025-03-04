@@ -18,6 +18,7 @@ def get_clipbloard_data():
 url_youtube = get_clipbloard_data()
 # TODO: Add multiple urls if there is a argument called many
 
+
 def download_video(url, *format):
     try:
         output = f"{DOWNLOAD_LOCATION}%(title)s.%(ext)s"
@@ -31,18 +32,17 @@ def download_video(url, *format):
         print(f"X Error downloading the video: {e}")
 
 
-
 if __name__ == "__main__":
     if len(sys.argv) != 2:
         print("You have to give only one argumnet: -v or -a")
         sys.exit(1)
     mode = sys.argv[1]
     if mode not in ["-v", "-a"]:
-        print(f"Invalid argument. It has to be -v (for [V]ideo) or -a (for [A]udio)")
+        print("Invalid argument. It has to be -v (for [V]ideo) or -a (for [A]udio)")
         sys.exit(1)
     if mode == "-v":
         print(" Youtube video is dowloading...")
         download_video(url_youtube, *MP4_FORMAT)
     if mode == "-a":
-        print(" Youtube audio is dowloading...")
+        print(f" Youtube audio is dowloading to {DOWNLOAD_LOCATION}")
         download_video(url_youtube, *MP3_FORMAT)
